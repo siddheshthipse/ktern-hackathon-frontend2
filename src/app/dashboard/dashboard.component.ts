@@ -108,6 +108,7 @@ export class DashboardComponent implements OnInit {
   }
 
   graphEditorLibraryImportEvent = (): Promise<GraphEditorIn> => {
+    console.log("CHECK");
     let temp:undefined;
     return new Promise((resolve, reject) => {
       this.drawioImport.showDialog((data:any) => {
@@ -121,6 +122,8 @@ export class DashboardComponent implements OnInit {
   }
 
   graphEditorActionsErrorEvent = (graphData:any): Promise<GraphEditorOut> => {
+    // console.log("Export Lib");
+    // console.log()
     return new Promise((resolve, reject) => {
       console.log('graphEditorActionsErrorEvent', graphData);
       resolve({
@@ -131,6 +134,7 @@ export class DashboardComponent implements OnInit {
   }
 
   graphEditorLibraryExportEvent = (graphData: GraphEditorSVG): Promise<GraphEditorOut> => {
+    console.log(graphData);
     let temp:any;
     return new Promise((resolve, reject) => {
       console.log("graphData", graphData);
