@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+:host ::ng-deep {
+    #mxgraph-diagram-container {
+        .geDialog {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+
+            table {
+                left: unset !important;
+            }
+        }
+    }
+}

@@ -27,10 +27,16 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@zklogic/draw.io/dist/mxgraph",
+                "output": "./mxgraph"
+              },
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@zklogic/draw.io/dist/mxgraph/styles/grapheditor.css",
               "src/styles.scss"
             ],
             "scripts": []
